@@ -3,13 +3,20 @@
 public class Job
 {
     // Creating class attributes
-    string _jobTitle;
-    string _company;
-    string _timeInterval;
+    public string _jobTitle;
+    public string _company;
+    public string _timeInterval;
 
     // Class constructor
     public Job()
     {
 
     }
+
+    // Display job method
+    public void DisplayJobDetails()
+    {
+        Console.WriteLine($"{_jobTitle} ({_company}) {_timeInterval}");
+    }
+
 }
