@@ -15,5 +15,15 @@ public abstract class Supplier
     {
         return _name;
     }
-    public abstract float CalculateFee();
+
+    public void SetFee(float fee)
+    {
+        _fee = fee;
+    }
+    public abstract void CalculateFee();
+
+    public float GetFee()
+    {
+        return _fee;
+    }
 }

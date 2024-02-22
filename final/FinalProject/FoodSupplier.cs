@@ -21,18 +21,21 @@ public class FoodSupplier : Supplier
     {
         _numberOfGuests = numbOfGuests;
     }
-    public override float CalculateFee()
+    public override void CalculateFee()
     {
-        return _valuePerGuest*_numberOfGuests;
+        SetFee(_valuePerGuest*_numberOfGuests);
     }
 
     public void AddMenu(string food)
     {
-
+        _menu.Add(food);
     }
     
-    public string GetMenu()
+    public void PrintMenu()
     {
-        return "menu";
+        foreach(string item in _menu)
+        {
+            Console.WriteLine(item);
+        }
     }
 }

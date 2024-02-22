@@ -12,18 +12,25 @@ public class MusicSupplier : Supplier
     }
 
     /*Class methods*/
-    public override float CalculateFee()
+    public override void CalculateFee()
     {
-        return 1000;
+        float value;
+        Console.Write("Enter the value of the music supplier chosen: ");
+        value = float.Parse(Console.ReadLine());
+
+        SetFee(value);
     }
 
-    public void AddMusic(string food)
+    public void AddMusic(string music)
     {
-
+        _musicList.Add(music);
     }
     
-    public string GetMusicList()
+    public void PrintMusicList()
     {
-        return "menu";
+        foreach(string music in _musicList)
+        {
+            Console.WriteLine(music);
+        }
     }
 }

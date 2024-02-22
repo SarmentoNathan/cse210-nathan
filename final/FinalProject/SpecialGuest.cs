@@ -7,15 +7,17 @@ public class SpecialGuest : Guest
     private string _task;
 
     /*Class constructor*/
-    public SpecialGuest(string name, string function) : base(name)
+    public SpecialGuest(string name, string phone, string function) : base(name, phone)
     {
         _function = function;
+        _task = "";
     }
 
     /*Class methods*/
     public void DelegateTask()
     {
-        
+        Console.WriteLine("Delegate a special task for this guest.");
+        _task = Console.ReadLine();
     }
 
     public string GetFunction()

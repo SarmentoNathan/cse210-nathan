@@ -1,35 +1,17 @@
-public class Groom
+public class Groom : Couple
 {
-    /*Class attributes*/
-    private string _name;
-    private int _age;
-    private string _vow;
-
     /*Class Constructor*/
-    public Groom(string name, int age)
+    public Groom(string name, int age, string phone) : base(name, age, phone)
     {
-        _name = name;
-        _age = age;
     }
 
     /*Class methods*/
-    public void SetVow()
+    public override void WriteVow()
     {
+        string vow;
+        Console.WriteLine("Write your vows to your future wife:");
+        vow = Console.ReadLine();
 
-    }
-
-    public string GetName()
-    {
-        return _name;
-    }
-
-    public int GetAge()
-    {
-        return _age;
-    }
-
-    public string GetVow()
-    {
-        return _vow;
+        SetVow(vow);
     }
 }
